@@ -1,0 +1,12 @@
+.DEFAULT_GOAL := upload
+
+config:
+	@echo "[!] Installing library ..."
+	@arduino-cli lib install [LIB]
+	@echo "Done."
+flash:
+	arduino --upload ./tmp.ino --port /dev/ttyACM*
+upload: config flash clean
+clean:
+	-rm ./Makefile ./tmp.ino
+
