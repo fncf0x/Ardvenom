@@ -5,7 +5,7 @@ config:
 	@arduino-cli lib install [LIB]
 	@echo "Done."
 flash:
-	arduino --upload ./tmp.ino --port /dev/ttyACM*
+	arduino --upload ./tmp.ino --board arduino:avr:micro --port /dev/ttyACM*
 upload: config flash clean
 clean:
 	-rm ./Makefile ./tmp.ino
