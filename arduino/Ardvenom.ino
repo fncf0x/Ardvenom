@@ -15,8 +15,8 @@ void setup(){
   runExec();
   delay(400);
   [LIB].println("[CMD]");
-  //.press(KEY_RETURN);
-  //KeyboardAzertyFr.releaseAll();
+  [LIB].press(KEY_RETURN);
+  [LIB].releaseAll();
 }
 void loop(){
 
